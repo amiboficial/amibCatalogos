@@ -1,6 +1,5 @@
 *\$_*.class
 *.class
-*.jar
 *.log
 *.war
 .DS_Store
