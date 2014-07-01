@@ -1,13 +1,13 @@
-package mx.amib.sistemas.catalogos.datoscontrol.model
+package mx.amib.sistemas.catalogos.datoscontrol.controller.rest
 
 import static org.springframework.http.HttpStatus.*
+import mx.amib.sistemas.catalogos.datoscontrol.model.VersionCatalogo
 import grails.rest.RestfulController
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
-class VersionCatalogoController extends RestfulController {
+@Transactional(readOnly = false)
+class VersionCatalogoRestfulController extends RestfulController {
 
-    /*static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]*/
 	static responseFormats = ['json', 'xml']
 	
     /*def index(Integer max) {
@@ -15,12 +15,12 @@ class VersionCatalogoController extends RestfulController {
         respond VersionCatalogo.list(params), model:[versionCatalogoInstanceCount: VersionCatalogo.count()]
     }*/
 
-	VersionCatalogoController() {
+	VersionCatalogoRestfulController() {
 		super(VersionCatalogo)
 	}
 	
 	def obtenerUltimaVersion(){
-		Integer numCat = params.int('numCat')
+		Integer numCat = params.int('numeroCatalogo')
 		respond VersionCatalogo.findAllByNumeroCatalogo(numCat)
 	}
 }

@@ -61,11 +61,15 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.1.1"
         compile ':cache:1.1.6'
         compile ":asset-pipeline:1.8.11"
-
+		//compile ':twitter-bootstrap:3.2.0'
+		
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
+		//runtime ":resources:1.2.8"
+		runtime ':twitter-bootstrap:3.2.0'
+		
 		//runtime ':db-reverse-engineer:0.5'
 		
         // Uncomment these to enable additional asset-pipeline capabilities

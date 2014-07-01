@@ -2,7 +2,7 @@ package mx.amib.sistemas.catalogos.sepomex.model.catalog
 
 import grails.rest.*
 
-@Resource(uri='/municipios', formats=['json', 'xml'])
+/*@Resource(uri='/municipios', formats=['json', 'xml'])*/
 class Municipio {
 
 	String clave

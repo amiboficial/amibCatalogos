@@ -2,7 +2,7 @@ package mx.amib.sistemas.catalogos.sepomex.model.catalog
 
 import grails.rest.*
 
-@Resource(uri='/entidadesFederativas', formats=['json', 'xml'])
+/*@Resource(uri='/entidadesFederativas', formats=['json', 'xml'])*/
 class EntidadFederativa {
 
 	String clave
