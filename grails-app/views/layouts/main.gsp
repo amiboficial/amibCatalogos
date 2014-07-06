@@ -18,8 +18,19 @@
 	</head>
 	<body>
 		<div class="fluid-container body-content">
-			<g:layoutBody/>  
+		
+			<div class="row">
+				<div class="col-md-2 col-sm-3">
+				    <g:render template="/layouts/menusidebar" />
+			   	</div>
+				      
+			    <div class="col-md-10 col-md-offset2 col-sm-9 col-sm-offset2">
+			        <g:layoutBody/>
+				</div>
+			</div>
+
 			<g:render template="/layouts/footer" />
 		</div>
 	</body>
 </html>
+

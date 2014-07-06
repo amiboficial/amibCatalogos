@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="layout" content="main"/>
-<title>Catálogos 0.1 - AMIB General</title>
+<title>Catálogos 0.1 - Búsqueda de registros</title>
 </head>
 <body>
 
