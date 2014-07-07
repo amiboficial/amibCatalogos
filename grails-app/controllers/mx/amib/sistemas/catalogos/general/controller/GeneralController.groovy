@@ -1,6 +1,6 @@
 package mx.amib.sistemas.catalogos.general.controller
 
-class SeccionController {
+class GeneralController {
 
     def index() { }
 }

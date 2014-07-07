@@ -8,61 +8,47 @@
 <body>
 
 	<ul class="breadcrumb">
-           <li><a href="#">Secciones</a><span class="divider"></span></li>
-           <li><a href="#">AMIB General</a></li>
+           <li><a href="#">Acciones</a><span class="divider"></span></li>
+           <li><a href="#">Búsqueda de Registros</a></li>
 	</ul>
 
-	<h1><strong>Detalle de sección "AMIB General"</strong></h1>
+	<h1><strong>Búsqueda de Registros</strong></h1>
 
-	<fieldset>
-		<legend>Descripción</legend>
-		<p>En esta sección se agrupan todos los catálogos empleados en la mayor parte de los procesos inherentes a la AMIB</p>
-	</fieldset>
+	<form class="form-horizontal" role="form">
+	
+		<fieldset>
+			<legend>Palabra de búsqueda</legend>
+			
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				Introduce la palabra o fragmento inicial de palabra a buscar en los catálogos.
+			</div>
+			
+			<div class="form-group">
+	            <label for="txtPalabraClave" class="col-lg-2 control-label">Palabra clave</label>
+	            <div class="col-lg-10">
+	            	<input type="text" class="form-control" id="txtPalabraClave" placeholder="Palabra clave">
+	            </div>
+	        </div>
+	        <div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10">
+					<button type="button" class="btn btn-default">Buscar</button>
+				</div>
+			</div>
+	        
+		</fieldset>
+	
+	    <fieldset>
+	        <legend>Parámetros de la búsqueda</legend>
+	        
+	        <div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				Si requiere una búsqueda mas especifica, selecciona de la siguiente lista de siguiente
+			</div>
+	        
+	    </fieldset>
 
-    <fieldset>
-        <legend>Catálogos</legend>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Dependente de</th>
-                    <th>Versión</th>
-                    <th>Ult. Actualización</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>101</td>
-                    <td>Institución</td>
-                    <td>102</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Tipo de institución</td>
-                    <td>N/A</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-                <tr>
-                    <td>103</td>
-                    <td>Figura</td>
-                    <td>N/A</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </fieldset>
-
+	</form>
 </body>
 </html>
 

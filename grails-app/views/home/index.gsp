@@ -8,60 +8,15 @@
 <body>
 
 	<ul class="breadcrumb">
-           <li><a href="#">Secciones</a><span class="divider"></span></li>
-           <li><a href="#">AMIB General</a></li>
+           <li><a href="#">Inicio</a><span class="divider"></span></li>
 	</ul>
 
-	<h1><strong>Detalle de sección "AMIB General"</strong></h1>
+	<h1><strong>AMIB Catálogos - Versión 0.1</strong></h1>
 
 	<fieldset>
-		<legend>Descripción</legend>
-		<p>En esta sección se agrupan todos los catálogos empleados en la mayor parte de los procesos inherentes a la AMIB</p>
+		<legend>Bienvenido</legend>
+		<p>(Datos de usuario)</p>
 	</fieldset>
-
-    <fieldset>
-        <legend>Catálogos</legend>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Dependente de</th>
-                    <th>Versión</th>
-                    <th>Ult. Actualización</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>101</td>
-                    <td>Institución</td>
-                    <td>102</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Tipo de institución</td>
-                    <td>N/A</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-                <tr>
-                    <td>103</td>
-                    <td>Figura</td>
-                    <td>N/A</td>
-                    <td>1</td>
-                    <td>03/06/2014</td>
-                    <td><button type="button" class="btn btn-xs btn-default">Editar</button></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </fieldset>
 
 </body>
 </html>
