@@ -9,11 +9,11 @@
             </div>
             <br/>
 
-            <ul class="list-group">
-                <li class="list-group-item active">Secciones</li>
-                <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;AMIB General</a></li>
-                <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;Personal</a></li>
-                <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-book"></span>&nbsp;Sepomex</a></li>
-                <li class="list-group-item active">Acciones</li>
-                <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-search"></span>&nbsp;Búsqueda de registros</a></li>
-            </ul>
+            <div class="list-group">
+                <a class="list-group-item active">Secciones</a>
+                <a href="<g:createLink controller="general" action="index" />" class="list-group-item"><span class="glyphicon glyphicon-book"></span>&nbsp;AMIB General</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-book"></span>&nbsp;Personal</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-book"></span>&nbsp;Sepomex</a>
+                <a href="#" class="list-group-item active">Acciones</a>
+                <a href="<g:createLink controller="busqueda" action="index" />" class="list-group-item"><span class="glyphicon glyphicon-search"></span>&nbsp;Búsqueda de registros</a>
+            </div>

@@ -16,13 +16,13 @@
 
 	<form class="form-horizontal" role="form">
 	
+		<div class="alert alert-info alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			Introduce la palabra o fragmento inicial de palabra a buscar en los catálogos. Si requiere una búsqueda mas especifica, puede especificar los detalles de su búsqueda en la sección "Parametros de búsqueda"
+		</div>
+	
 		<fieldset>
 			<legend>Palabra de búsqueda</legend>
-			
-			<div class="alert alert-info alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				Introduce la palabra o fragmento inicial de palabra a buscar en los catálogos.
-			</div>
 			
 			<div class="form-group">
 	            <label for="txtPalabraClave" class="col-lg-2 control-label">Palabra clave</label>
@@ -41,10 +41,86 @@
 	    <fieldset>
 	        <legend>Parámetros de la búsqueda</legend>
 	        
-	        <div class="alert alert-info alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				Si requiere una búsqueda mas especifica, selecciona de la siguiente lista de siguiente
-			</div>
+	        <p>Selecciona secciones y/o catálogos a incluir en la búsqueda:</p>
+	        
+	        <div class="checkbox">
+	            <label>
+	            	<input type="checkbox" id="cbxGeneral" value="" />AMIB General
+	            </label>
+	        </div>
+	        
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Figura
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Institución
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Tipo de institución
+		            </label>
+		        </div>
+	        
+	        <div class="checkbox">
+	            <label>
+	            	<input type="checkbox" id="cbxGeneral" value="" />Personal
+	            </label>
+	        </div>
+	        
+	        	<div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Nacionalidad
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Nivel de estudios
+		            </label>
+		        </div>
+	        
+	        <div class="checkbox">
+	            <label>
+	            	<input type="checkbox" id="cbxGeneral" value="" />Sepomex
+	            </label>
+	        </div>
+	        
+	        	<div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Entidad Federativa
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Municipio
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Asentamiento
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Ciudad
+		            </label>
+		        </div>
+		        <div class="col-xs-offset-1 checkbox">
+		            <label>
+		            	<input type="checkbox" id="cbxGeneral" value="" />Sepomex (Código Postal)
+		            </label>
+		        </div>
+		        
+		        <br/>
+		        
+		        <div class="form-group">
+					<div class="col-lg-offset-2 col-lg-10">
+						<button type="button" class="btn btn-default">Búsqueda avanzada</button>
+					</div>
+				</div>
 	        
 	    </fieldset>
 
