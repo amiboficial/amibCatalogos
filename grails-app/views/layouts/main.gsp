@@ -17,11 +17,13 @@
 		<g:layoutHead/>	
 	</head>
 	<body>
-		
+	
+	
 		<div class="fluid-container body-content">
-			
 			<div class="body-content">
+		<div class="container-fluid navbar-fixed-top">
 		<header>
+		
        	 	<div class="container-fluid colorcabecera">
           			<div class="row">
             			<div class="col-lg-2 col-sm-2 col-md-2 colorcabecera centrar">
@@ -56,13 +58,11 @@
 						</ul>
 						</div>
 						</div>			
-			    
 				</nav>
 			</div>
 		</div>
-	
-	
-	
+	</div>
+</div>
 			
 			
 			<div class="row">
