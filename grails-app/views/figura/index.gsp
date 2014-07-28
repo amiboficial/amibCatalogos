@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="vavBar">
+		<meta name="layout" content="main">
 		<!-- Gestion figura -->
 		  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<!--  -->
@@ -18,44 +18,38 @@
 		
 	</head>
 	<body>
-	
-	<div class="container" role="navigation">
-	<div class="row">
-		<nav  class="navbar navbar-default">
-        		<div class="navbar-header">       	
-     					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                				<span class="sr-only">Toggle navigation</span>
-                    			<span class="icon-bar"></span>
-                    			<span class="icon-bar"></span>
-            				</button>
-						</div>
-				<div class="navbar-collapse collapse">
-					<div class="nav" role="navigation">
-						<ul class="nav navbar-nav navbar-center" role="navigation">
-							<!--  <li class="active"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>-->
-							<li><g:link class="create" action="create">Crear nueva figura</g:link></li>
-						</ul>
-					</div>		
-				</div>
-			</nav>
-			</div>
-		</div>
-			
-			
-	<div class="container">
-		<div class="row">
-    	<div class="widgetTitle text-center">
-			<div id="list-figura" class="content scaffold-list" role="vavBar">
-			    <h1>Gestión Figura</h1>
-			      <g:if test="${flash.message}">
-					<div class="message" role="status">${flash.message}</div>
-				  </g:if>
-			</div>
-		</div>
-			
-		<div class="panel panel-default">
+		<ul class="breadcrumb">
+           <li><a href="#">Inicio</a><span class="divider"></span></li>
+           <li><a href="#">Gestión figura</a></li>
+		</ul>
+		<fieldset>
+			<div class="panel panel-default col-lg-12">
             	<div class="panel-heading">
-                	<h3 class="panel-title">Tabla gestión figura</h3>
+					<h2 class="panel-title">Acciones</h2>
+					</div></br>
+					
+						<ul class="nav navbar-nav" role="navigation">
+							<!--  <li class="active"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>-->
+							<li><g:link class="create btn btn-primary colortitle colorblack" action="create">Crear nueva figura</g:link></li>
+						</ul></br>
+					</div>
+		</fieldset>		
+		<fieldset>
+			<div class="panel-heading">	
+    			<div class="widgetTitle">
+					<div id="list-figura" class="content scaffold-list" role="main">
+			   		 	<h1>Gestión Figura</h1>
+			      		<g:if test="${flash.message}">
+							<div class="message" role="status">${flash.message}</div>
+				  		</g:if>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<div class="panel panel-default">
+            	<div class="panel-heading">
+                	<h3 class="panel-title">Lista de figuras</h3>
 				</div>
 			
 			<table class="table table-bordered table-striped table-hover" style="width: 100%; margin: auto;" border="0"
@@ -78,13 +72,10 @@
 				</g:each>
 				</tbody>
 			</table>
-		</div>
-			 
+			</div>	 
+		</fieldset>
 		 	<div class="pagination">
 				<g:paginate total="${figuraInstanceCount ?: 0}" />
 			</div>
-			
-		</div>
-		</div>
 	</body>
 </html>

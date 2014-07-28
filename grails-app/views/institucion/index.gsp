@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="vavBar">
+		<meta name="layout" content="main">
 		<!--  -->
 		<link rel="stylesheet" type="text/css"
 			href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
@@ -14,42 +14,45 @@
 		<!--  -->
 	</head>
 	<body>
-	
-<div class="container" role="navigation">
-	<div class="row">
-		<nav  class="navbar navbar-default">
-        		<div class="navbar-header">       	
-     					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                				<span class="sr-only">Toggle navigation</span>
-                    			<span class="icon-bar"></span>
-                    			<span class="icon-bar"></span>
-            				</button>
-						</div>
-				<div class="navbar-collapse collapse">
+		<ul class="breadcrumb">
+           <li><a href="#">Acciones</a><span class="divider"></span></li>
+           <li><a href="#">Búsqueda de Registros</a></li>
+		</ul>
+		<fieldset>
+			<div class="panel panel-default col-lg-12">
+            	<div class="panel-heading">
+					<h2 class="panel-title">Acciones</h2>
+					</div></br>
 						<!--  <a href="#list-institucion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a> -->
-						<div class="nav" role="navigation">
-							<ul class="nav navbar-nav navbar-center" role="navigation">
-								<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-								<li><g:link class="create" action="create">Crear nueva institucion</g:link></li>
-							</ul>
-						</div>
-				</div>
-		</nav>
-	</div>
-</div>
+							<ul class="nav navbar-nav" role="navigation">
+								<!--<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>-->
+								<li><g:link class="create btn btn-primary colortitle colorblack" action="create">Crear nueva institución</g:link></li>
+							</ul></br>
+			</div>
+		</fieldset>
 
 
 
-<div class="container">
-	<div class="row">
-    	<div class="widgetTitle text-center">
-			<div id="list-institucion" class="content scaffold-list" role="vavBar">
-				<h1>Gestion institucion</h1>
-				<g:if test="${flash.message}">
+	<fieldset>
+		<div class="panel-heading">	
+    		<div class="widgetTitle">
+				<div id="list-institucion" class="content scaffold-list" role="main">
+					<h1>Gestion institución</h1>
+					<g:if test="${flash.message}">
 					<div class="message" role="status">${flash.message}</div>
-				</g:if>
-				<table style="width: 100%; margin: auto;" border="0" id="tblFigura">
-			<thead>
+					</g:if>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<div class="panel panel-default">
+            	<div class="panel-heading">
+                	<h3 class="panel-title">Lista de instituciones</h3>
+				</div>
+					<table style="width: 100%; margin: auto;" border="0" id="tblFigura">
+				<thead>
 					<tr>
 					
 						<g:sortableColumn property="nombre" title="${message(code: 'institucion.nombre.label', default: 'Nombre')}" />
@@ -66,7 +69,7 @@
 					
 						<td><g:link action="show" id="${institucionInstance.id}">${fieldValue(bean: institucionInstance, field: "nombre")}</g:link></td>
 					
-						<td>${fieldValue(bean: institucionInstance, field: "tipoInstitucion")}</td>
+						<td>${fieldValue(bean: institucionInstance, field: "tipoInstitucion.descripcion")}</td>
 					
 						<td><g:formatBoolean boolean="${institucionInstance.vigente}" /></td>
 					
@@ -74,12 +77,11 @@
 				</g:each>
 				</tbody>
 			</table>
+		</div>
+	</fieldset>
 			<div class="pagination">
 				<g:paginate total="${institucionInstanceCount ?: 0}" />
 			</div>
-		</div>
-		</div>
-		</div>
-		</div>
+	
 	</body>
 </html>

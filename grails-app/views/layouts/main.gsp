@@ -17,14 +17,64 @@
 		<g:layoutHead/>	
 	</head>
 	<body>
-		<div class="fluid-container body-content">
 		
+		<div class="fluid-container body-content">
+			
+			<div class="body-content">
+		<header>
+       	 	<div class="container-fluid colorcabecera">
+          			<div class="row">
+            			<div class="col-lg-2 col-sm-2 col-md-2 colorcabecera centrar">
+            					<a href="${createLink(uri: '/')}" class="thumbnail colorcabecera">
+            					<asset:image src="logoamib.jpeg" alt="AMIB"/>
+                    			</a>
+                		</div>
+                		<div class="hidden-xs col-lg-6 col-sm-6 col-md-6 colorcabecera centrar">    
+                			<h1 class="container colorletracabecera"> Asociacón Mexicana de Intermediarios Bursátiles </h1>
+                		</div>
+                	</div>
+                </div>	
+             </header>         
+	
+	<div class="container-fluid" role="navigation">
+		<div class="row">
+			<nav  class="navbar navbar-default">
+        		<div class="navbar-header">       	
+     					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                				<span class="sr-only">Toggle navigation</span>
+                    			<span class="icon-bar"></span>
+                    			<span class="icon-bar"></span>
+                    			<span class="icon-bar"></span>
+            				</button>
+            				<a href="#" class="navbar-brand">Catálogos Ver. 0.1</a>
+						</div>
+				<div class="navbar-collapse collapse">
+					<div class="nav" role="navigation">
+						<ul class="nav navbar-nav" role="navigation">
+							<li><a href="#">link</a></li>
+							<li><a href="#">link1</a></li>
+						</ul>
+						</div>
+						</div>			
+			    
+				</nav>
+			</div>
+		</div>
+	
+	
+	
+			
+			
 			<div class="row">
-				<div class="col-md-2 col-sm-3">
+				<div class="col-md-2 col-sm-3 col-lg-2">
 				    <g:render template="/layouts/menusidebar" />
 			   	</div>
-				      
-			    <div class="col-md-10 col-md-offset2 col-sm-9 col-sm-offset2">
+			 
+		    
+			    <div class=" col-lg-10 col-md-10 col-md-offset2 col-sm-9 col-sm-offset2">
+		    
+		    		
+						
 			        <g:layoutBody/>
 				</div>
 			</div>

@@ -16,18 +16,40 @@
 		<!--  -->
 	</head>
 	<body>
-		<a href="#list-tipoInstitucion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create">Crear tipo institución</g:link></li>
-			</ul>
-		</div>
-		<div id="list-tipoInstitucion" class="content scaffold-list" role="main">
-			<h1>Gestion tipo institución</h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
+		<ul class="breadcrumb">
+           <li><a href="#">Acciones</a><span class="divider"></span></li>
+           <li><a href="#">Búsqueda de Registros</a></li>
+		</ul>
+		<fieldset>
+			<div class="panel panel-default col-lg-12">
+            	<div class="panel-heading">
+					<h2 class="panel-title">Acciones</h2>
+				</div></br>
+						<ul class="nav navbar-nav" role="navigation">
+							<!--  <a href="#list-tipoInstitucion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+							<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>-->
+							<li><g:link class="create btn btn-primary colortitle colorblack" action="create">Crear tipo institución</g:link></li>
+						</ul></br>
+			</div>
+		</fieldset>
+		<fieldset>
+			<div class="panel-heading">	
+    			<div class="widgetTitle">
+					<div id="list-tipoInstitucion" class="content scaffold-list" role="main">
+						<h1>Gestion tipo institución</h1>
+						<g:if test="${flash.message}">
+							<div class="message" role="status">${flash.message}</div>
+						</g:if>
+					</div>	
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<div class="panel panel-default">
+            	<div class="panel-heading">
+                	<h3 class="panel-title">Lista de figuras</h3>
+				</div>
+			
 			<table style="width: 100%; margin: auto;" border="0"
 			id="tblFigura">
 			<thead>
@@ -51,9 +73,12 @@
 				</g:each>
 				</tbody>
 			</table>
+			</div>
+		</fieldset>
 			<div class="pagination">
 				<g:paginate total="${tipoInstitucionInstanceCount ?: 0}" />
 			</div>
-		</div>
+		
+	
 	</body>
 </html>
