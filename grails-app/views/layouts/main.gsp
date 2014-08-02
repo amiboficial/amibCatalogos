@@ -17,70 +17,86 @@
 		<g:layoutHead/>	
 	</head>
 	<body>
-	
-	
-		<div class="fluid-container body-content">
-			<div class="body-content">
-		<div class="container-fluid navbar-fixed-top">
-		<header>
-		
-       	 	<div class="container-fluid colorcabecera">
-          			<div class="row">
-            			<div class="col-lg-2 col-sm-2 col-md-2 colorcabecera centrar">
-            					<a href="${createLink(uri: '/')}" class="thumbnail colorcabecera">
-            					<asset:image src="logoamib.jpeg" alt="AMIB"/>
-                    			</a>
-                		</div>
-                		<div class="hidden-xs col-lg-6 col-sm-6 col-md-6 colorcabecera centrar">    
-                			<h1 class="container colorletracabecera"> Asociacón Mexicana de Intermediarios Bursátiles </h1>
-                		</div>
-                	</div>
-                </div>	
-             </header>         
-	
-	<div class="container-fluid" role="navigation">
-		<div class="row">
-			<nav  class="navbar navbar-default">
-        		<div class="navbar-header">       	
-     					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                				<span class="sr-only">Toggle navigation</span>
-                    			<span class="icon-bar"></span>
-                    			<span class="icon-bar"></span>
-                    			<span class="icon-bar"></span>
-            				</button>
-            				<a href="#" class="navbar-brand">Catálogos Ver. 0.1</a>
-						</div>
-				<div class="navbar-collapse collapse">
-					<div class="nav" role="navigation">
-						<ul class="nav navbar-nav" role="navigation">
-							<li><a href="#">link</a></li>
-							<li><a href="#">link1</a></li>
-						</ul>
-						</div>
-						</div>			
-				</nav>
-			</div>
-		</div>
-	</div>
-</div>
-			
-			
-			<div class="row">
-				<div class="col-md-2 col-sm-3 col-lg-2">
-				    <g:render template="/layouts/menusidebar" />
-			   	</div>
-			 
-		    
-			    <div class=" col-lg-10 col-md-10 col-md-offset2 col-sm-9 col-sm-offset2">
-		    
-		    		
-						
-			        <g:layoutBody/>
-				</div>
-			</div>
 
+		<div class="container-fluid">
+			<div class="body-content">
+				<div class="navbar-fixed-top">
+				
+					<header>
+		       	 		<div class="container-fluid colorcabecera">
+		          			<div class="row">
+		            			<div class="col-sm-2">
+		           					<a href="${createLink(uri: '/')}">
+		           						<asset:image class="center-block" src="logoamib.jpeg" alt="AMIB"/>
+		                   			</a>
+		                		</div>
+		                		<div class="hidden-xs col-sm-10 col-sm-offset2">    
+		                			<span class="container letracabecera">Asociación Mexicana de Intermediarios Bursátiles</span>
+		                		</div>
+		                	</div>
+		                </div>	
+		             </header>         
+			
+					<div role="navigation">
+						<div>
+						
+							<nav class="navbar navbar-default">
+			        			<div class="navbar-header">       	
+			     					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			                				<span class="sr-only">Toggle navigation</span>
+			                    			<span class="icon-bar"></span>
+			                    			<span class="icon-bar"></span>
+			                    			<span class="icon-bar"></span>
+			            				</button>
+			            				<a href="#" class="navbar-brand"><strong>Catálogos</strong> 0.1</a>
+								</div>
+								<div class="navbar-collapse collapse">
+									<div class="nav" role="navigation">
+										<ul class="nav navbar-nav pull-right" role="navigation">
+											<li><a href="#">(Detalles de sesión)</a></li>
+											<li><a href="#"></a></li>
+										</ul>
+									</div>
+								</div>		
+							</nav>
+							
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-3 col-md-2">
+					    <g:render template="/layouts/menusidebar" />
+				   	</div>
+				    <div class="col-sm-9 col-sm-offset3 col-md-10 col-md-offset2">
+			        	<g:layoutBody/>
+					</div>
+				</div>
+				
+			</div>
+			
 			<g:render template="/layouts/footer" />
+			
 		</div>
+		
+		<!-- div "oculto" para probar si no estamos en telefono  -->
+		<div id="divDesktopTest" class="hidden-xs"></div>
+	
+	<!-- INICIA: SCRIPT AFFIX-LIKE -->
+	<!-- No se puedo emplear el affix del bootstrap como tal debido a que este implementaba position:fixed y el menu se "echaba a perder" -->
+	<script>
+		var iScrollPos = 0;
+		$(window).scroll(function () {
+		    var iCurScrollPos = $(this).scrollTop();
+		    if(!$('#divDesktopTest').is(':hidden'))
+			{
+		    	$('#divLineBreaks').height( iCurScrollPos );
+			}
+		});
+	</script>
+	<!-- FIN: SCRIPT AFFIX-LIKE -->
+	
 	</body>
 </html>
 

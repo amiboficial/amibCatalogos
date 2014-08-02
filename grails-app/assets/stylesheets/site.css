@@ -1,6 +1,6 @@
 body {
     /*padding-top: 50px;*/
-    padding-top: 200px;
+    padding-top: 165px;
     padding-bottom: 75px;
 }
 
@@ -77,7 +77,7 @@ input[type="checkbox"].input-validation-error {
 .navbar-default .navbar-brand:focus{
 	color: #634D15;
 	background-color: transparent;
-	}
+}
 	
 .navbar-default .navbar-nav > li > a {
 	color:#634D15;
@@ -88,7 +88,7 @@ input[type="checkbox"].input-validation-error {
 .navbar-default .navbar-nav > .active > a:focus{
 	color:#FFFFFF;
 	background-color:#1A242F;
-	}
+}
 	
 navbar-default .navbar-nav > li > a:hover,
 navbar-default .navbar-nav > li > a:focus{
@@ -101,45 +101,37 @@ navbar-default .navbar-nav > li > a:focus{
 .navbar-default .navbar-nav > .open > a:focus {
 	background-color:1A242F;
 	color:#FFFFFF;
-	}
+}
 	
 .colorcabecera {
-	
-	background-color:#020564;
-	border-color:#020564;
-	
+	background-color:#003365;
+	border-color:#003365;
 }
-.colorletracabecera{
+
+.letracabecera{
+	font-weight: bold;
+	font-family: "Trebuchet MS", Helvetica;
+	font-size: 21px;
 	color: #ffffff;
 }
 
-.centrar2{
-	
-	padding-bottom:0px;
-	padding-left:280px;
-	padding-right:280px;
-	padding-top:0px;}
-
-.centrar{
-	
-	
-	padding-left:10px;
-	padding-right:10px;
-	padding-top:15px;}
+.nombresistema{
+	font-weight: bold;
+	font-family: "Trebuchet MS", Helvetica;
+	font-size: 12px;
+}
 	
 .navbar-default1 {
 	background-color: #DFDFE1;
 	
 	}
 	
- .navbar-nav {
-        display: table-cell;
-        float: none;
-        text-align: center;
-    }
+.navbar-nav {
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
     
 .colorblack{
-	
 	color:#000000
-	
 }
