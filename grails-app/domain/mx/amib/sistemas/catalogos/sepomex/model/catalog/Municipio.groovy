@@ -20,7 +20,7 @@ class Municipio {
 		id generator: "assigned"
 		
 		clave column:'cve_municipio'
-		nombre column:'nm_municipio'
+		nombre column:'nb_municipio'
 		vigente column:'st_vigente'
 		entidadFederativa column:'id_301_entidadfed'
 		

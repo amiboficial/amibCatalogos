@@ -93,6 +93,10 @@
 			{
 		    	$('#divLineBreaks').height( iCurScrollPos );
 			}
+		    else
+			{
+		    	$('#divLineBreaks').height( 0 );
+			}
 		});
 	</script>
 	<!-- FIN: SCRIPT AFFIX-LIKE -->

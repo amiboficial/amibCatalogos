@@ -17,7 +17,7 @@ class Ciudad {
 		
 		
 		clave column:'cve_ciudad'
-		nombre column:'nm_ciudad'
+		nombre column:'nb_ciudad'
 		vigente column:'st_vigente'
 		municipio column:'id_302_municipio'
 		

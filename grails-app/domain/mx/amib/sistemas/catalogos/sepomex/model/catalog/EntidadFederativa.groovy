@@ -18,7 +18,7 @@ class EntidadFederativa {
 		version 'nu_rev'
 		
 		clave column:'cve_entidadfed'
-		nombre column:'nm_entidadfed'
+		nombre column:'nb_entidadfed'
 		vigente column:'st_vigente'
 	}
 
