@@ -34,33 +34,26 @@ grails.mime.types = [ // the first one is the default format
 // URL Mapping Cache Max Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
-// Legacy setting for codec used to encode data with ${}
-grails.views.default.codec = "html"
-
 // The default scope for controllers. May be prototype, session or singleton.
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
 // GSP settings
-grails {
-    views {
-        gsp {
-            encoding = 'UTF-8'
-            htmlcodec = 'xml' // use xml escaping instead of HTML4 escaping
-            codecs {
-                expression = 'html' // escapes values inside ${}
-                scriptlet = 'html' // escapes output from scriptlets in GSPs
-                taglib = 'none' // escapes output from taglibs
-                staticparts = 'none' // escapes output from static template parts
-            }
-        }
-        // escapes all not-encoded output at final stage of outputting
-        //filteringCodecForContentType.'text/html' = 'html'
-    }
-}
-
-
+/*
+grails.views.gsp.encoding = 'UTF-8'
+grails.views.gsp.htmlcodec = 'html'
+grails.views.gsp.codecs.expression = 'html'
+grails.views.gsp.codecs.scriptlet = 'html'
+grails.views.gsp.codecs.taglib = 'none'
+grails.views.gsp.codecs.staticparts = 'none'
+grails.converters.encoding = "UTF-8"*/
+// The default codec used to encode data with ${}
+grails.views.default.codec = "none" // none, html, base64
+grails.views.gsp.encoding = "UTF-8"
 grails.converters.encoding = "UTF-8"
+// enable Sitemesh preprocessing of GSP pages
+grails.views.gsp.sitemesh.preprocess = true
+
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
 
