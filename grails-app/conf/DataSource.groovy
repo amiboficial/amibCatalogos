@@ -18,7 +18,7 @@ environments {
     development {
         dataSource {
             dbCreate = "validate" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:sqlserver://bimalatrop.no-ip.biz:1433;databaseName=dbamibcatalogos"
+            url = "jdbc:sqlserver://bima-devqa-serv:1433;databaseName=dbamibcatalogos"
         }
     }
     test {

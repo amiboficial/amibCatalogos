@@ -2,6 +2,7 @@ package mx.amib.sistemas.catalogos.sepomex.controller.rest
 
 import static org.springframework.http.HttpStatus.*
 import mx.amib.sistemas.catalogos.sepomex.model.catalog.Sepomex
+import grails.converters.JSON
 import grails.rest.RestfulController
 import grails.transaction.Transactional
 
@@ -12,6 +13,12 @@ class SepomexRestfulController extends RestfulController {
 	
 	SepomexRestfulController() {
 		super(Sepomex)
+	}
+	
+	def findByCodigoPostal(){
+		String codigoPostal = params.'cp'
+		
+		render Sepomex.findAllByCodigoPostalAndVigente(codigoPostal,true) as JSON
 	}
 	
 }
