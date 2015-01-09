@@ -4,6 +4,8 @@ class GrupoFinanciero {
 	String nombre
 	Boolean vigente
 	
+	static hasMany = [instituciones:Institucion]
+	
 	static mapping = {
 		table 't104_c_gpofinanciero'
 		

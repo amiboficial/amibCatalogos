@@ -14,4 +14,31 @@ class InstitucionRestfulController extends RestfulController{
 		super(Institucion)
 	}
 	
+	def totalCount(){
+		TreeMap<String,Long> responseMap = new TreeMap<String,Long>()
+		responseMap.put("totalCount",Institucion.count)
+		respond responseMap
+	}
+	
+	def list(){
+		respond Institucion.list()
+	}
+	
+	def findAllByVersion(Long id){
+		Long numeroVersion = id
+		respond Institucion.findAllByVersion(numeroVersion)
+	}
+	
+	def getExistingIds(){
+		def idsToCompareJSON = params.'ids'
+
+		List<Long> idsToCompare = new ArrayList<Long>()
+		JSON.parse(idsToCompareJSON).each{
+			idsToCompare.add(Long.valueOf(it))
+		}
+
+		def result = Institucion.executeQuery("select ins.id from Institucion ins where ins.id in :ids",[ids:idsToCompare])
+		respond result
+	}
+	
 }

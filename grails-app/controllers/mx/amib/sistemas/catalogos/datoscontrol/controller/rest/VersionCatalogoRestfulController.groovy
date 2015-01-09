@@ -19,8 +19,8 @@ class VersionCatalogoRestfulController extends RestfulController {
 		super(VersionCatalogo)
 	}
 	
-	def obtenerUltimaVersion(){
-		Integer numCat = params.int('numeroCatalogo')
-		respond VersionCatalogo.findAllByNumeroCatalogo(numCat)
+	def obtenerUltimaVersion(Integer id){
+		Integer numCat = id
+		respond VersionCatalogo.findByNumeroCatalogo(numCat)
 	}
 }

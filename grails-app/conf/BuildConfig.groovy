@@ -70,7 +70,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.11.1"
 		//runtime ":resources:1.2.8"
 		runtime ':twitter-bootstrap:3.2.0'
-		
+		runtime ":rest-client-builder:2.0.0"
 		//runtime ':db-reverse-engineer:0.5'
 		
         // Uncomment these to enable additional asset-pipeline capabilities

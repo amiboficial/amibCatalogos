@@ -1,32 +1,33 @@
-package mx.amib.sistemas.catalogos.persona.controller.rest
+package mx.amib.sistemas.catalogos.general.controller.rest
 
 import static org.springframework.http.HttpStatus.*
-import mx.amib.sistemas.catalogos.persona.model.catalog.Nacionalidad
+import mx.amib.sistemas.catalogos.general.model.catalog.VarianteFigura
 import grails.rest.RestfulController
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = false)
-class NacionalidadRestfulController extends RestfulController{
+class VarianteFiguraRestfulController extends RestfulController{
 
 	static responseFormats = ['json', 'xml']
 	
-	NacionalidadRestfulController() {
-		super(Nacionalidad)
+    VarianteFiguraRestfulController() {
+		super(VarianteFigura)
 	}
 	
 	def totalCount(){
 		TreeMap<String,Long> responseMap = new TreeMap<String,Long>()
-		responseMap.put("totalCount",Nacionalidad.count)
+		responseMap.put("totalCount",VarianteFigura.count)
 		respond responseMap
 	}
 	
 	def list(){
-		respond Nacionalidad.list()
+		respond VarianteFigura.list()
 	}
 	
 	def findAllByVersion(Long id){
 		Long numeroVersion = id
-		respond Nacionalidad.findAllByVersion(numeroVersion)
+		respond VarianteFigura.findAllByVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){
@@ -37,7 +38,7 @@ class NacionalidadRestfulController extends RestfulController{
 			idsToCompare.add(Long.valueOf(it))
 		}
 
-		def result = Nacionalidad.executeQuery("select na.id from Nacionalidad na where na.id in :ids",[ids:idsToCompare])
+		def result = VarianteFigura.executeQuery("select vf.id from VarianteFigura vf where vf.id in :ids",[ids:idsToCompare])
 		respond result
 	}
 }
