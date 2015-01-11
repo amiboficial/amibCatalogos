@@ -24,9 +24,9 @@ class NacionalidadRestfulController extends RestfulController{
 		respond Nacionalidad.list()
 	}
 	
-	def findAllByVersion(Long id){
+	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond Nacionalidad.findAllByVersion(numeroVersion)
+		respond Nacionalidad.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){

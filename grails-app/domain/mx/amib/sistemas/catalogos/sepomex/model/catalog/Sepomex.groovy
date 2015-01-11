@@ -2,6 +2,7 @@ package mx.amib.sistemas.catalogos.sepomex.model.catalog
 
 class Sepomex {
 
+	Long numeroVersion
 	String codigoPostal
 	Boolean vigente
 	Ciudad ciudad
@@ -13,13 +14,13 @@ class Sepomex {
 		table 't305_c_sepomex'
 		
 		id generator: "assigned"
+		numeroVersion column:'nu_version'
+		version false
 		
 		codigoPostal column:'cve_codigopostal'
 		vigente column:'st_vigente'
 		ciudad column:'id_304_ciudad'
 		asentamiento column:'id_303_asentamiento'
-		
-		version false
 	}
 
 	static constraints = {

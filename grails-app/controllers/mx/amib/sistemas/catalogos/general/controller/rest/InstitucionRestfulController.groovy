@@ -24,9 +24,9 @@ class InstitucionRestfulController extends RestfulController{
 		respond Institucion.list()
 	}
 	
-	def findAllByVersion(Long id){
+	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond Institucion.findAllByVersion(numeroVersion)
+		respond Institucion.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){

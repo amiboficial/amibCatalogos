@@ -8,7 +8,7 @@ class FiguraMarshalling {
 		JSON.registerObjectMarshaller(Figura){ Figura obj ->
 			return [
 				id:obj.id,
-				version:obj.version,
+				numeroVersion:obj.numeroVersion,
 				nombre:obj.nombre,
 				nombreAcuse:obj.nombreAcuse,
 				esAutorizable:obj.esAutorizable,

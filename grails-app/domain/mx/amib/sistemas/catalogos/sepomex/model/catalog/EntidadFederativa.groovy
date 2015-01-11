@@ -5,6 +5,7 @@ import grails.rest.*
 /*@Resource(uri='/entidadesFederativas', formats=['json', 'xml'])*/
 class EntidadFederativa {
 
+	Long numeroVersion
 	String clave
 	String nombre
 	Boolean vigente
@@ -15,7 +16,8 @@ class EntidadFederativa {
 		table 't301_c_entidadfed'
 		
 		id generator: "assigned"
-		version 'nu_rev'
+		numeroVersion column:'nu_version'
+		version false
 		
 		clave column:'cve_entidadfed'
 		nombre column:'nb_entidadfed'

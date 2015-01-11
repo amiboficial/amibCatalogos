@@ -2,6 +2,7 @@ package mx.amib.sistemas.catalogos.general.model.catalog
 
 class Figura {
 
+	Long numeroVersion
 	String nombre
 	String nombreAcuse
 	Boolean esAutorizable
@@ -16,6 +17,8 @@ class Figura {
 		table 't103_c_figura'
 		
 		id generator: "assigned"
+		numeroVersion column:'nu_version'
+		version false
 		
 		nombre column:'nb_figura'
 		nombreAcuse column:'nb_acuse'

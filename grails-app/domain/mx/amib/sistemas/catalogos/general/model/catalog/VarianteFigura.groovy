@@ -2,6 +2,7 @@ package mx.amib.sistemas.catalogos.general.model.catalog
 
 class VarianteFigura {
 
+	Long numeroVersion
 	String nombre
 	Boolean vigente
 	
@@ -14,10 +15,14 @@ class VarianteFigura {
 		
 		id generator: "assigned"
 		
+		numeroVersion column: 'nu_version'
+		
 		nombre column:'nb_varfigura'
 		vigente column:'st_vigente'
 		
 		figura column:'id_103_figura'
+		
+		version false
 	}
 	
     static constraints = {

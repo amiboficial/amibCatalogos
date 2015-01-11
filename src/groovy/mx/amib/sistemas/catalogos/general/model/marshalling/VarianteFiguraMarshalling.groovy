@@ -8,7 +8,7 @@ class VarianteFiguraMarshalling {
 		JSON.registerObjectMarshaller(VarianteFigura){ VarianteFigura obj ->
 			return [
 				id:obj.id,
-				version:obj.version,
+				numeroVersion:obj.numeroVersion,
 				nombre:obj.nombre,
 				vigente:obj.vigente,
 				idFigura:obj.figura?.id,

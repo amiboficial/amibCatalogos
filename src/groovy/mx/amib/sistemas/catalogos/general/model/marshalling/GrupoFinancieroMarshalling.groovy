@@ -9,6 +9,7 @@ class GrupoFinancieroMarshalling {
 		JSON.registerObjectMarshaller(GrupoFinanciero){ GrupoFinanciero obj ->
 			return [
 				id:obj.id,
+				numeroVersion:obj.numeroVersion,
 				nombre:obj.nombre,
 				vigente:obj.vigente,
 				instituciones:obj.instituciones

@@ -8,6 +8,7 @@ class InstitucionMarshalling {
 		JSON.registerObjectMarshaller(Institucion){ Institucion obj ->
 			return [
 				id:obj.id,
+				numeroVersion:obj.numeroVersion,
 				nombre:obj.nombre,
 				vigente:obj.vigente,
 				idTipoInstitucion:obj.tipoInstitucion.id,

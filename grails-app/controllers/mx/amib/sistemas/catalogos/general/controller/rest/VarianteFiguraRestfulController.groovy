@@ -25,9 +25,9 @@ class VarianteFiguraRestfulController extends RestfulController{
 		respond VarianteFigura.list()
 	}
 	
-	def findAllByVersion(Long id){
+	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond VarianteFigura.findAllByVersion(numeroVersion)
+		respond VarianteFigura.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){

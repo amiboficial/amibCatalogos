@@ -24,9 +24,9 @@ public class GrupoFinancieroRestfulController extends RestfulController{
 		respond GrupoFinanciero.list()
 	}
 	
-	def findAllByVersion(Long id){
+	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond GrupoFinanciero.findAllByVersion(numeroVersion)
+		respond GrupoFinanciero.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){

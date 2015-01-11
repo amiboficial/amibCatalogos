@@ -24,9 +24,9 @@ class TipoDocumentoSustentanteRestfulController  extends RestfulController{
 		respond TipoDocumentoSustentante.list()
 	}
 	
-	def findAllByVersion(Long id){
+	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond TipoDocumentoSustentante.findAllByVersion(numeroVersion)
+		respond TipoDocumentoSustentante.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){

@@ -5,6 +5,7 @@ import grails.rest.*
 /*@Resource(uri='/municipios', formats=['json', 'xml'])*/
 class Municipio {
 
+	Long numeroVersion
 	String clave
 	String nombre
 	Boolean vigente
@@ -18,13 +19,13 @@ class Municipio {
 		table 't302_c_municipio'
 		
 		id generator: "assigned"
+		numeroVersion column:'nu_version'
+		version false
 		
 		clave column:'cve_municipio'
 		nombre column:'nb_municipio'
 		vigente column:'st_vigente'
 		entidadFederativa column:'id_301_entidadfed'
-		
-		version false
 	}
 
 	static constraints = {

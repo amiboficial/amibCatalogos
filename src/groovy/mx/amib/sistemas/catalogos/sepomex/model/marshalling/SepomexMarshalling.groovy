@@ -9,6 +9,7 @@ class SepomexMarshalling {
 		JSON.registerObjectMarshaller(Sepomex){ Sepomex obj ->
 			return [
 				id: obj.id,
+				numeroVersion:obj.numeroVersion,
 				codigoPostal: obj.codigoPostal,
 				
 				idEntidadFederativa: obj.asentamiento.municipio.entidadFederativa.id,
@@ -28,6 +29,7 @@ class CiudadMarshalling {
 		JSON.registerObjectMarshaller(Ciudad){ Ciudad obj ->
 			return [
 				id: obj.id,
+				numeroVersion:obj.numeroVersion,
 				clave: obj.clave,
 				nombre: obj.nombre,
 				vigente: obj.vigente,
@@ -46,6 +48,7 @@ class AsentamientoMarshalling {
 		JSON.registerObjectMarshaller(Asentamiento){ Asentamiento obj ->
 			return [
 				id: obj.id,
+				numeroVersion:obj.numeroVersion,
 				clave: obj.clave,
 				nombre: obj.nombre,
 				vigente: obj.vigente,
@@ -64,6 +67,7 @@ class MunicipioMarshalling {
 		JSON.registerObjectMarshaller(Municipio){ Municipio obj ->
 			return [
 				id: obj.id,
+				numeroVersion:obj.numeroVersion,
 				clave: obj.clave,
 				nombre: obj.nombre,
 				vigente: obj.vigente,
@@ -80,6 +84,7 @@ class EntidadFederativaMarshalling {
 		JSON.registerObjectMarshaller(EntidadFederativa){ EntidadFederativa obj ->
 			return [
 				id: obj.id,
+				numeroVersion:obj.numeroVersion,
 				clave: obj.clave,
 				nombre: obj.nombre,
 				vigente: obj.vigente
