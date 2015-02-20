@@ -4,6 +4,7 @@ import static org.springframework.http.HttpStatus.*
 import mx.amib.sistemas.catalogos.persona.model.catalog.Nacionalidad
 import grails.rest.RestfulController
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = false)
 class NacionalidadRestfulController extends RestfulController{

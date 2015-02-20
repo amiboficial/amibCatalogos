@@ -1,33 +1,33 @@
 package mx.amib.sistemas.catalogos.persona.controller.rest
 
 import static org.springframework.http.HttpStatus.*
-import mx.amib.sistemas.catalogos.persona.model.catalog.TipoDocumentoSustentante
+import mx.amib.sistemas.catalogos.persona.model.catalog.EstadoCivil
 import grails.rest.RestfulController
 import grails.transaction.Transactional
 import grails.converters.JSON
 
 @Transactional(readOnly = false)
-class TipoDocumentoSustentanteRestfulController  extends RestfulController{
+class EstadoCivilRestfulController extends RestfulController{
 
 	static responseFormats = ['json', 'xml']
 	
-    TipoDocumentoSustentanteRestfulController() {
-		super(TipoDocumentoSustentante)
+    EstadoCivilRestfulController(){ 
+		super(EstadoCivil)
 	}
 	
 	def totalCount(){
 		TreeMap<String,Long> responseMap = new TreeMap<String,Long>()
-		responseMap.put("totalCount",TipoDocumentoSustentante.count)
+		responseMap.put("totalCount",EstadoCivil.count)
 		respond responseMap
 	}
 	
 	def list(){
-		respond TipoDocumentoSustentante.list()
+		respond Nacionalidad.list()
 	}
 	
 	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond TipoDocumentoSustentante.findAllByNumeroVersion(numeroVersion)
+		respond EstadoCivil.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){
@@ -38,7 +38,7 @@ class TipoDocumentoSustentanteRestfulController  extends RestfulController{
 			idsToCompare.add(Long.valueOf(it))
 		}
 
-		def result = TipoDocumentoSustentante.executeQuery("select tpds.id from TipoDocumentoSustentante tpds where tpds.id in :ids",[ids:idsToCompare])
+		def result = EstadoCivil.executeQuery("select e.id from EstadoCivil e where e.id in :ids",[ids:idsToCompare])
 		respond result
 	}
 }

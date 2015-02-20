@@ -4,6 +4,7 @@ import static org.springframework.http.HttpStatus.*
 import mx.amib.sistemas.catalogos.persona.model.catalog.TipoTelefono
 import grails.rest.RestfulController
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = false)
 class TipoTelefonoRestfulController  extends RestfulController{

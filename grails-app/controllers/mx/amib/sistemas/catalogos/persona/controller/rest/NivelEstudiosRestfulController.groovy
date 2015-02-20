@@ -4,6 +4,7 @@ import static org.springframework.http.HttpStatus.*
 import mx.amib.sistemas.catalogos.persona.model.catalog.NivelEstudios
 import grails.rest.RestfulController
 import grails.transaction.Transactional
+import grails.converters.JSON
 
 @Transactional(readOnly = false)
 class NivelEstudiosRestfulController extends RestfulController{
@@ -26,7 +27,7 @@ class NivelEstudiosRestfulController extends RestfulController{
 	
 	def findAllByNumeroVersion(Long id){
 		Long numeroVersion = id
-		respond Nacionalidad.findAllByNumeroVersion(numeroVersion)
+		respond NivelEstudios.findAllByNumeroVersion(numeroVersion)
 	}
 	
 	def getExistingIds(){
