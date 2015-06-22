@@ -22,7 +22,7 @@ class EstadoCivilRestfulController extends RestfulController{
 	}
 	
 	def list(){
-		respond Nacionalidad.list()
+		respond EstadoCivil.list()
 	}
 	
 	def findAllByNumeroVersion(Long id){
