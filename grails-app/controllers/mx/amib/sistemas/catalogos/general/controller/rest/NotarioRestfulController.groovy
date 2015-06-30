@@ -83,7 +83,7 @@ class NotarioRestfulController extends RestfulController{
 			if(numeroNotario != null && numeroNotario > 0){
 				eq("numeroNotario",numeroNotario)
 			}
-			if(nombreCompleto != null && nombreCompleto.trim().compareTo("") == 0){
+			if(nombreCompleto != null && nombreCompleto.trim().compareTo("") != 0){
 				like("nombreCompleto",nombreCompleto + "%")
 			}
 		}
