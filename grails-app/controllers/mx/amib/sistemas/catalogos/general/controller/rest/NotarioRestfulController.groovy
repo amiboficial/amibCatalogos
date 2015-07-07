@@ -14,8 +14,12 @@ class NotarioRestfulController extends RestfulController{
 		super(Notario)
 	}
 	
-	def index(Integer max, Integer offset,
-			String sort, String order){
+	def index(){
+		
+		Integer max = Integer.parseInt(params.'max'?:'10')
+		Integer offset = Integer.parseInt(params.'offset'?:'0')
+		String sort = params.'sort'?:'id'
+		String order = params.'order'?:'asc'
 		
 		SearchResult sr = new SearchResult()
 		
@@ -29,7 +33,7 @@ class NotarioRestfulController extends RestfulController{
 		if(sort == null || sort == ""){
 			sort = "id";
 		}
-		else if(!Arrays.asList( ["idEntidadFederativa","numeroNotario","nombreCompleto"] ).contains(sort)){
+		else if(!["idEntidadFederativa","numeroNotaria","nombreCompleto"].contains(sort)){
 			sort = "id";
 		}
 		if(order == null || order == ""){
@@ -52,8 +56,17 @@ class NotarioRestfulController extends RestfulController{
 		render sr as JSON
 	}
 	
-	def findAllBy(Long idEntidadFederativa, Integer numeroNotario, String nombreCompleto, 
-			Integer max, Integer offset, String sort, String order){
+	def findAllBy(){
+			
+		Integer max = Integer.parseInt(params.'max'?:'10')
+		Integer offset = Integer.parseInt(params.'offset'?:'0')
+		String sort = params.'sort'?:'id'
+		String order = params.'order'?:'asc'
+		
+		Long idEntidadFederativa = Long.parseLong(params.'idEntidadFederativa'?:'-1')
+		Integer numeroNotaria = Integer.parseInt(params.'numeroNotaria'?:'-1')
+		String nombreCompleto = params.'nombreCompleto'?:''
+		
 		SearchResult sr = new SearchResult()
 		
 		//Se checan los parametros de "control"
@@ -66,7 +79,7 @@ class NotarioRestfulController extends RestfulController{
 		if(sort == null || sort == ""){
 			sort = "id";
 		}
-		else if(!Arrays.asList( ["idEntidadFederativa","numeroNotario","nombreCompleto"] ).contains(sort)){
+		else if( !['idEntidadFederativa','numeroNotaria','nombreCompleto'].contains(sort) ){
 			sort = "id";
 		}
 		if(order == null || order == ""){
@@ -80,8 +93,8 @@ class NotarioRestfulController extends RestfulController{
 			if(idEntidadFederativa != null && idEntidadFederativa > 0){
 				eq("idEntidadFederativa",idEntidadFederativa)
 			}
-			if(numeroNotario != null && numeroNotario > 0){
-				eq("numeroNotario",numeroNotario)
+			if(numeroNotaria != null && numeroNotaria > 0){
+				eq("numeroNotaria",numeroNotaria)
 			}
 			if(nombreCompleto != null && nombreCompleto.trim().compareTo("") != 0){
 				like("nombreCompleto",nombreCompleto + "%")
